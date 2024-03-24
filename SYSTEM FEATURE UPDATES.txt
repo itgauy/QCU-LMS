@@ -1,0 +1,51 @@
+SYSTEM FEATURE UPDATES (Draft: February 07, 2024)
+
+ADMIN  DASHBOARD (CREATE STUDENT ACCOUNT)
+- Automatic insertion of a dash in the Student Number field after every two digits entered.
+- Restriction on the Student Number field to accept digits only.
+- Requirement of the ‘Section’ field depending on the classification (the ‘Section’ field is required if the classification is ‘Regular’).
+
+
+SYSTEM FEATURE UPDATES (Draft: February 08, 2024)
+
+ADMIN DASHBOARD (CREATE STUDENT ACCOUNT)
+- Restriction on the ‘Name’ field to accept letters only.
+- Auto-generation feature for usernames based on the user’s date of birth and student number.
+- Conversion of the ‘Suffix’ field from a text box to a dropdown menu.
+
+
+SYSTEM FEATURE UPDATES (Draft: February 09, 2024)
+
+ADMIN DASHBOARD (CREATE STUDENT ACCOUNT)
+- Auto-generation feature for temporary passwords based on the current date and student number.
+- Addition of mandatory field indicators which are dynamically displayed when toggling student classifications.
+- Integration of an AJAX-based notification system that triggers an alert upon successful creation of a student account. (Temporary)
+
+
+SYSTEM FEATURE UPDATES (Draft: February 10, 2024)
+
+STUDENT DASHBOARD
+- Student dashboard to display the name of the logged-in student.
+- logout function that invalidates all active sessions associated with a student account.
+- Automatic redirection feature that navigates to the login page if no student account is detected as logged in.
+- Automatic redirection feature that navigates to the student dashboard if a student account is detected as logged in.
+
+
+SYSTEM FEATURE UPDATES (Draft: February 20, 2024)
+
+ROOT
+- .htaccess file added for shorter URL.
+- Implementation of hashed passwords.
+
+ADMIN DASHBOARD (CREATE STUDENT ACCOUNT)
+- Addition of MaxLength as constraints for each input fields.
+
+STUDENT LOGIN
+- Prompt for a new password when the student account is new.
+- Proper Pop-up of error message.
+
+
+SYSTEM FEATURE UPDATES (Draft: February 25, 2024)
+
+STUDENT CHANGE PASSWORD
+- Bug fixec

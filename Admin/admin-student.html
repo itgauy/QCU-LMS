@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student Account</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="form">
+        <h1>Admin Dashboard</h1> <!-- WAG KO NA LAGYAN COMMENT, HASSLE PA TSAKA HTML LANG YAN JK -->
+        <form action="../Models/add_student.php" method="post" onsubmit="event.preventDefault(); addStudent(this);">
+            <label for="req"><sup><b>Required *</b></sup></label>
+            <label for="sn">Student Number:<b> *</b></label><br>
+            <input type="text" id="sn" name="sn" required><br><br>
+
+            <label for="fname">First Name:<b> *</b></label><br>
+            <input type="text" id="fname" name="fname" required><br><br>
+
+            <label for="mname">Middle Name:</label><br>
+            <input type="text" id="mname" name="mname" placeholder="(Optional)"><br><br>
+
+            <label for="lname">Last Name:<b> *</b></label><br>
+            <input type="text" id="lname" name="lname" required><br><br>
+
+            <label for="suffix">Suffix</label><br>
+            <select name="suffix" id="suffix">
+                <option selected value=" "> NONE </option>
+                <option value="JR.">JR</option>
+                <option value="SR.">SR.</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label for="dob">Date of Birth:<b> *</b></label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="prog">Program:<b> *</b></label><br>
+            <select name="prog" id="prog" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+                <option value="BSIS">BSIS</option>
+                <option value="BSA">BSA</option>
+                <option value="BSENT">BSENT</option>
+                <option value="BSECE">BSECE</option>
+                <option value="BSIE">BSIE</option>
+                <option value="BSEED">BSEED</option>
+            </select><br><br>
+
+            <label for="prog">Year Level:<b> *</b></label><br>
+            <select name="yrLvl" id="yrLvl" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1ST YEAR">1ST YEAR</option>
+                <option value="2ND YEAR">2ND YEAR</option>
+                <option value="3RD YEAR">3RD YEAR</option>
+                <option value="4TH YEAR">4TH YEAR</option>
+            </select><br><br>
+
+            <label for="class">Classification:<b> *</b></label><br>
+            <label class="radio">
+                <input type="radio" id="reg" name="class" value="REGULAR" onchange="toggleSectionReadonly(false); addRequiredLabel()" required>
+                Regular
+            </label>
+            <label class="radio">
+                <input type="radio" id="irreg" name="class" value="IRREGULAR" onchange="toggleSectionReadonly(true); removeRequiredLabel()">
+                Irregular
+            </label>
+
+            <label for="section">Section:<span id="sectionRequired"></span></label><br>
+            <input type="text" id="section" name="section" required readonly><br><br>
+
+            <label for="email">Email:<b> *</b></label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="user">Username:</label><br>
+            <input type="text" id="user" name="user" required readonly placeholder="(Auto-Generated)"><br><br>
+
+            <label for="pass">Temporary Password:</label><br>
+            <input type="text" id="pass" name="pass" required readonly placeholder="(Auto-Generated)"><br><br>
+            
+            <input type="submit" value="Add Student">
+        </form>
+    </div>
+    <script src="../Controllers/add_student.js"></script>
+</body>
+</html>

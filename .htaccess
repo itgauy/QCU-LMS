@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Rule for static files
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.*\.(css|js|jpg|png))$ /$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# New rule
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ Admins/$1 [L]
